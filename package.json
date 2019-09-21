@@ -4,16 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:dev": "DATABASE_URL=postgres://localhost/acme_tdd_db mocha spec.js --watch"
+    "test:dev": "DATABASE_URL=postgres://localhost/acme_tdd_test_db mocha spec.js --watch",
+    "_comment": "in test:dev made seprate database for test and called acme_tdd_test_db so you create two database one for testing the application and one for application"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.2.0"
+    "mocha": "^6.2.0",
+    "supertest": "^4.0.2"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "pg": "^7.12.1",
     "sequelize": "^5.19.0"
   }
